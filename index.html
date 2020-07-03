@@ -1,0 +1,664 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<link rel="apple-touch-icon" href="icon.png"/><!-- 57px square -->
+<title>Ara's Octonauts Soundboard</title>
+<style type="text/css" media="screen">
+body{
+background: url(octonauts.jpg) no-repeat center center fixed;
+background-size: cover;
+height: 100%;
+-webkit-appearance: none;
+padding: 0;
+padding-top: 40px;
+margin: 0;
+border: 0;
+font-size:0;
+}
+button[type=button] {
+position:relative;
+padding: 30px;
+margin: 10px;
+-webkit-appearance: none;
+font-color: #FFF;
+font-size:14px;
+font-weight: bold;
+border: 0;
+border-radius: 20px;
+
+opacity: 0.8;
+}
+</style>
+</head>
+<body>
+<button type="button" style="background: #7ad379;" onclick="aud_play_pause()">Theme</button>
+<button type="button" style="background: #ffb949;" onclick="aud_play_pausetwo()">See this</button>
+<button type="button" style="background: #64d0d3;" onclick="aud_play_pausefour()">No plan</button>
+<button type="button" style="background: #fbd95e;" onclick="aud_play_pausethree()">Come in</button>
+<button type="button" style="background: #f85e16;" onclick="aud_play_pausefive()">Beast</button>
+<button type="button" style="background: #1d8da1;" onclick="aud_play_pausesix()">Allow me</button>
+<button type="button" style="background: #982f34;" onclick="aud_play_pauseseven()">So long</button>
+<button type="button" style="background: #feb2b2;" onclick="aud_play_pauseeight()">Gup A</button>
+<button type="button" style="background: #fdf289;" onclick="aud_play_pauseten()">Typing</button>
+<button type="button" style="background: #1fb6cb;" onclick="aud_play_pausetwelve()">Good as New</button>
+<button type="button" style="background: #00c892;" onclick="aud_play_pausethirteen()">Sound alert</button>
+<button type="button" style="background: #64d0d3;" onclick="aud_play_pausefourteen()">Where is Kwazii</button>
+<button type="button" style="background: #d1812a;" onclick="aud_play_pausefifteen()">Bloop</button>
+<button type="button" style="background: #eef700;" onclick="aud_play_pausesixteen()">To the Launch Bay</button>
+<button type="button" style="background: #f85e16;" onclick="aud_play_pauseseventeen()">Keep a lookout</button>
+<button type="button" style="background: #ffb949;" onclick="aud_play_pauseeighteen()">Say "ahh"</button>
+<button type="button" style="background: #fbd95e;" onclick="aud_play_pausenineteen()">Going after him</button>
+<button type="button" style="background: #64d0d3;" onclick="aud_play_pausetwenty()">Woah walruses</button>
+<button type="button" style="background: #982f34;" onclick="aud_play_pausetwentyone()">Sound alert, to the HQ</button>
+<button type="button" style="background: #1d8da1;" onclick="aud_play_pausetwentytwo()">Return now</button>
+<button type="button" style="background: #feb2b2;" onclick="aud_play_pausetwentythree()">Open hatch</button>
+<button type="button" style="background: #d92e03;" onclick="aud_play_pausetwentyfour()">Sorry to wake</button>
+<button type="button" style="background: #5b7880;" onclick="aud_play_pausetwentyfive()">Beeping</button>
+<button type="button" style="background: #fdf289;" onclick="aud_play_pausetwentysix()">Pirates are made</button>
+<button type="button" style="background: #dafee4;" onclick="aud_play_pausetwentyseven()">Extra marshmallows</button>
+<button type="button" style="background: #00c892;" onclick="aud_play_pausetwentyeight()">Let's get up and out</button>
+<button type="button" style="background: #dafee4;" onclick="aud_play_pausetwentynine()">Heading straight for us</button>
+<button type="button" style="background: #d92e03;" onclick="aud_play_pausethirty()">Turbo button</button>
+<button type="button" style="background: #f85e16;" onclick="aud_play_pausethirtyone()">Aye aye sir</button>
+<button type="button" style="background: #982f34;" onclick="aud_play_pausethirtytwo()">Tip toe</button>
+<button type="button" style="background: #ffb949;" onclick="aud_play_pausethirtythree()">Octoscope</button>
+<button type="button" style="background: #fbd95e;" onclick="aud_play_pausethirtyfour()">Stand aside</button>
+<button type="button" style="background: #dafee4;" onclick="aud_play_pausethirtyfive()">Aye aye cap'n</button>
+<button type="button" style="background: #1d8da1;" onclick="aud_play_pausethirtyseven()">Beeping alert</button>
+<button type="button" style="background: #00c892;" onclick="aud_play_pausethirtyeight()">Plunk</button>
+<button type="button" style="background: #5b7880;" onclick="aud_play_pausethirtynine()">Charge</button>
+<button type="button" style="background: #dafee4;" onclick="aud_play_pauseforty()">How dare</button>
+<button type="button" style="background: #00c892;" onclick="aud_play_pausefortyone()">That should do it</button>
+<button type="button" style="background: #d1812a;" onclick="aud_play_pausefortytwo()">Test drive</button>
+<button type="button" style="background: #dafee4;" onclick="aud_play_pausefortythree()">Who knocking?</button>
+<button type="button" style="background: #64d0d3;" onclick="aud_play_pausefortyfour()">Gup B</button>
+<button type="button" style="background: #f85e16;" onclick="aud_play_pausefortyfive()">Tunip faint</button>
+
+
+<audio id="one" source src="sounds/Theme-song.mp3" type='audio/mp3'>Your user agent does not support the HTML5 Audio element.</audio>
+
+<script>
+function aud_play_pause() {
+  var one = document.getElementById("one");
+  if (one.paused) {
+    one.play();
+  } else {
+    one.pause();
+  }
+}
+</script>                          
+
+
+<audio id="two" source src="sounds/Tweak-captain-youve-got-to-see-this.mp3" type='audio/mp3'>Your user agent does not support the HTML5 Audio element.</audio>
+
+<script>
+function aud_play_pausetwo() {
+  var two = document.getElementById("two");
+  if (two.paused) {
+    two.play();
+  } else {
+    two.pause();
+  }
+}
+</script>
+
+<audio id="four" source src="sounds/Kwazii-i-dont-have-a-plan.mp3" type='audio/mp3'>Your user agent does not support the HTML5 Audio element.</audio>
+<script>
+function aud_play_pausefour() {
+  var four = document.getElementById("four");
+  if (four.paused) {
+    four.play();
+  } else {
+    four.pause();
+  }
+}
+</script>
+
+<audio id="three" source src="sounds/Barnacles-come-in-shellington.mp3" type='audio/mp3'>Your user agent does not support the HTML5 Audio element.</audio>
+<script>
+function aud_play_pausethree() {
+  var three = document.getElementById("three");
+  if (three.paused) {
+    three.play();
+  } else {
+    three.pause();
+  }
+}
+</script>
+
+
+
+
+
+<audio id="five" source src="sounds/Kwazii-the-beasts-mighty-jaws.mp3" type='audio/mp3'>Your user agent does not support the HTML5 Audio element.</audio>
+
+<script>
+function aud_play_pausefive() {
+  var five = document.getElementById("five");
+  if (five.paused) {
+    five.play();
+  } else {
+    five.pause();
+  }
+}
+</script>
+
+<audio id="six" source src="sounds/Barnacles-allow-me.mp3" type='audio/mp3'>Your user agent does not support the HTML5 Audio element.</audio>
+
+<script>
+function aud_play_pausesix() {
+  var six = document.getElementById("six");
+  if (six.paused) {
+    six.play();
+  } else {
+    six.pause();
+  }
+}
+</script>
+<audio id="seven" source src="sounds/Kwazii-so-long-matey.mp3" type='audio/mp3'>Your user agent does not support the HTML5 Audio element.</audio>
+
+<script>
+function aud_play_pauseseven() {
+  var seven = document.getElementById("seven");
+  if (seven.paused) {
+    seven.play();
+  } else {
+    seven.pause();
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+<audio id="eight" source src="sounds/Barnacles-to-the-gup-a.mp3" type='audio/mp3'>Your user agent does not support the HTML5 Audio element.</audio>
+
+<script>
+function aud_play_pauseeight() {
+  var eight = document.getElementById("eight");
+  if (eight.paused) {
+    eight.play();
+  } else {
+    eight.pause();
+  }
+}
+</script>
+
+
+
+
+
+<audio id="ten" source src="sounds/Computer-beeps.mp3" type='audio/mp3'>Your user agent does not support the HTML5 Audio element.</audio>
+<script>
+function aud_play_pauseten() {
+  var ten = document.getElementById("ten");
+  if (ten.paused) {
+    ten.play();
+  } else {
+    ten.pause();
+  }
+}
+</script>
+
+
+<audio id="twelve" source src="sounds/Peso-good-as-new.mp3" type='audio/mp3'>Your user agent does not support the HTML5 Audio element.</audio>
+<script>
+function aud_play_pausetwelve() {
+  var twelve = document.getElementById("twelve");
+  if (twelve.paused) {
+    twelve.play();
+  } else {
+    twelve.pause();
+  }
+}
+</script>
+
+
+<audio id="thirteen" source src="sounds/Barnacles-sound-the-Octoalert.mp3" type='audio/mp3'>Your user agent does not support the HTML5 Audio element.</audio>
+<script>
+function aud_play_pausethirteen() {
+  var thirteen = document.getElementById("thirteen");
+  if (thirteen.paused) {
+    thirteen.play();
+  } else {
+    thirteen.pause();
+  }
+}
+</script>
+
+
+<audio id="fourteen" source src="sounds/Barnacles-hmm-where-is-kwazii.mp3" type='audio/mp3'>Your user agent does not support the HTML5 Audio element.</audio>
+<script>
+function aud_play_pausefourteen() {
+  var fourteen = document.getElementById("fourteen");
+  if (fourteen.paused) {
+    fourteen.play();
+  } else {
+    fourteen.pause();
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<audio id="fifteen" source src="sounds/Zoom.mp3" type='audio/mp3'>Your user agent does not support the HTML5 Audio element.</audio>
+<script>
+function aud_play_pausefifteen() {
+  var fifteen = document.getElementById("fifteen");
+  if (fifteen.paused) {
+    fifteen.play();
+  } else {
+    fifteen.pause();
+  }
+}
+</script>
+
+
+<audio id="sixteen" source src="sounds/Barnacles-octonauts-to-the-launch-bay.mp3" type='audio/mp3'>Your user agent does not support the HTML5 Audio element.</audio>
+<script>
+function aud_play_pausesixteen() {
+  var sixteen = document.getElementById("sixteen");
+  if (sixteen.paused) {
+    sixteen.play();
+  } else {
+    sixteen.pause();
+  }
+}
+</script>
+
+
+<audio id="seventeen" source src="sounds/Barnacles-you-stay-here.mp3" type='audio/mp3'>Your user agent does not support the HTML5 Audio element.</audio>
+<script>
+function aud_play_pauseseventeen() {
+  var seventeen = document.getElementById("seventeen");
+  if (seventeen.paused) {
+    seventeen.play();
+  } else {
+    seventeen.pause();
+  }
+}
+</script>
+
+
+<audio id="eighteen" source src="sounds/Peso-say-aah.mp3" type='audio/mp3'>Your user agent does not support the HTML5 Audio element.</audio>
+<script>
+function aud_play_pauseeighteen() {
+  var eighteen = document.getElementById("eighteen");
+  if (eighteen.paused) {
+    eighteen.play();
+  } else {
+    eighteen.pause();
+  }
+}
+</script>
+
+
+<audio id="nineteen" source src="sounds/Barnacles-going-after-him.mp3" type='audio/mp3'>Your user agent does not support the HTML5 Audio element.</audio>
+<script>
+function aud_play_pausenineteen() {
+  var nineteen = document.getElementById("nineteen");
+  if (nineteen.paused) {
+    nineteen.play();
+  } else {
+    nineteen.pause();
+  }
+}
+</script>
+
+
+<audio id="twenty" source src="sounds/Kwazii-a-lot-of-walruses.mp3" type='audio/mp3'>Your user agent does not support the HTML5 Audio element.</audio>
+<script>
+function aud_play_pausetwenty() {
+  var twenty = document.getElementById("twenty");
+  if (twenty.paused) {
+    twenty.play();
+  } else {
+    twenty.pause();
+  }
+}
+</script>
+
+
+<audio id="twentyone" source src="sounds/Barnacles-sound-the-octoalert-hq.mp3" type='audio/mp3'>Your user agent does not support the HTML5 Audio element.</audio>
+<script>
+function aud_play_pausetwentyone() {
+  var twentyone = document.getElementById("twentyone");
+  if (twentyone.paused) {
+    twentyone.play();
+  } else {
+    twentyone.pause();
+  }
+}
+</script>
+
+
+<audio id="twentytwo" source src="sounds/Dashi-return-to-the-octopod.mp3" type='audio/mp3'>Your user agent does not support the HTML5 Audio element.</audio>
+<script>
+function aud_play_pausetwentytwo() {
+  var twentytwo = document.getElementById("twentytwo");
+  if (twentytwo.paused) {
+    twentytwo.play();
+  } else {
+    twentytwo.pause();
+  }
+}
+</script>
+
+
+<audio id="twentythree" source src="sounds/Kwazii-open-the-octohatch.mp3" type='audio/mp3'>Your user agent does not support the HTML5 Audio element.</audio>
+<script>
+function aud_play_pausetwentythree() {
+  var twentythree = document.getElementById("twentythree");
+  if (twentythree.paused) {
+    twentythree.play();
+  } else {
+    twentythree.pause();
+  }
+}
+</script>
+
+
+<audio id="twentyfour" source src="sounds/Barnacles-sorry-to-wake-you.mp3" type='audio/mp3'>Your user agent does not support the HTML5 Audio element.</audio>
+<script>
+function aud_play_pausetwentyfour() {
+  var twentyfour = document.getElementById("twentyfour");
+  if (twentyfour.paused) {
+    twentyfour.play();
+  } else {
+    twentyfour.pause();
+  }
+}
+</script>
+
+
+<audio id="twentyfive" source src="sounds/Beeping.mp3" type='audio/mp3'>Your user agent does not support the HTML5 Audio element.</audio>
+<script>
+function aud_play_pausetwentyfive() {
+  var twentyfive = document.getElementById("twentyfive");
+  if (twentyfive.paused) {
+    twentyfive.play();
+  } else {
+    twentyfive.pause();
+  }
+}
+</script>
+
+
+<audio id="twentysix" source src="sounds/Kwazii-pirates-are-made-for-nighttime.mp3" type='audio/mp3'>Your user agent does not support the HTML5 Audio element.</audio>
+<script>
+function aud_play_pausetwentysix() {
+  var twentysix = document.getElementById("twentysix");
+  if (twentysix.paused) {
+    twentysix.play();
+  } else {
+    twentysix.pause();
+  }
+}
+</script>
+
+
+<audio id="twentyseven" source src="sounds/Barnacles-extra-marshmallows.mp3" type='audio/mp3'>Your user agent does not support the HTML5 Audio element.</audio>
+<script>
+function aud_play_pausetwentyseven() {
+  var twentyseven = document.getElementById("twentyseven");
+  if (twentyseven.paused) {
+    twentyseven.play();
+  } else {
+    twentyseven.pause();
+  }
+}
+</script>
+
+
+<audio id="twentyeight" source src="sounds/Barnacles-lets-get-up-and-out.mp3" type='audio/mp3'>Your user agent does not support the HTML5 Audio element.</audio>
+<script>
+function aud_play_pausetwentyeight() {
+  var twentyeight = document.getElementById("twentyeight");
+  if (twentyeight.paused) {
+    twentyeight.play();
+  } else {
+    twentyeight.pause();
+  }
+}
+</script>
+
+
+<audio id="twentynine" source src="sounds/Barnacles-its-heading-straight-for-us.mp3" type='audio/mp3'>Your user agent does not support the HTML5 Audio element.</audio>
+<script>
+function aud_play_pausetwentynine() {
+  var twentynine = document.getElementById("twentynine");
+  if (twentynine.paused) {
+    twentynine.play();
+  } else {
+    twentynine.pause();
+  }
+}
+</script>
+
+
+<audio id="thirty" source src="sounds/Tweak-turbo-button.mp3" type='audio/mp3'>Your user agent does not support the HTML5 Audio element.</audio>
+<script>
+function aud_play_pausethirty() {
+  var thirty = document.getElementById("thirty");
+  if (thirty.paused) {
+    thirty.play();
+  } else {
+    thirty.pause();
+  }
+}
+</script>
+
+
+<audio id="thirtyone" source src="sounds/Dashi-aye-aye-sir.mp3" type='audio/mp3'>Your user agent does not support the HTML5 Audio element.</audio>
+<script>
+function aud_play_pausethirtyone() {
+  var thirtyone = document.getElementById("thirtyone");
+  if (thirtyone.paused) {
+    thirtyone.play();
+  } else {
+    thirtyone.pause();
+  }
+}
+</script>
+
+
+<audio id="thirtytwo" source src="sounds/Barnacles-we-better-step-lightly.mp3" type='audio/mp3'>Your user agent does not support the HTML5 Audio element.</audio>
+<script>
+function aud_play_pausethirtytwo() {
+  var thirtytwo = document.getElementById("thirtytwo");
+  if (thirtytwo.paused) {
+    thirtytwo.play();
+  } else {
+    thirtytwo.pause();
+  }
+}
+</script>
+
+
+<audio id="thirtythree" source src="sounds/Barnacles-activating-octoscope.mp3" type='audio/mp3'>Your user agent does not support the HTML5 Audio element.</audio>
+<script>
+function aud_play_pausethirtythree() {
+  var thirtythree = document.getElementById("thirtythree");
+  if (thirtythree.paused) {
+    thirtythree.play();
+  } else {
+    thirtythree.pause();
+  }
+}
+</script>
+
+
+<audio id="thirtyfour" source src="sounds/Kwazii-stand-aside.mp3" type='audio/mp3'>Your user agent does not support the HTML5 Audio element.</audio>
+<script>
+function aud_play_pausethirtyfour() {
+  var thirtyfour = document.getElementById("thirtyfour");
+  if (thirtyfour.paused) {
+    thirtyfour.play();
+  } else {
+    thirtyfour.pause();
+  }
+}
+</script>
+
+
+<audio id="thirtyfive" source src="sounds/Peso-aye-aye-captain.mp3" type='audio/mp3'>Your user agent does not support the HTML5 Audio element.</audio>
+<script>
+function aud_play_pausethirtyfive() {
+  var thirtyfive = document.getElementById("thirtyfive");
+  if (thirtyfive.paused) {
+    thirtyfive.play();
+  } else {
+    thirtyfive.pause();
+  }
+}
+</script>
+
+
+
+
+<audio id="thirtyseven" source src="sounds/Beep-beep-beep-beep.mp3" type='audio/mp3'>Your user agent does not support the HTML5 Audio element.</audio>
+<script>
+function aud_play_pausethirtyseven() {
+  var thirtyseven = document.getElementById("thirtyseven");
+  if (thirtyseven.paused) {
+    thirtyseven.play();
+  } else {
+    thirtyseven.pause();
+  }
+}
+</script>
+
+
+<audio id="thirtyeight" source src="sounds/Short-beep.mp3" type='audio/mp3'>Your user agent does not support the HTML5 Audio element.</audio>
+<script>
+function aud_play_pausethirtyeight() {
+  var thirtyeight = document.getElementById("thirtyeight");
+  if (thirtyeight.paused) {
+    thirtyeight.play();
+  } else {
+    thirtyeight.pause();
+  }
+}
+</script>
+
+
+<audio id="thirtynine" source src="sounds/Barnacles-charge.mp3" type='audio/mp3'>Your user agent does not support the HTML5 Audio element.</audio>
+<script>
+function aud_play_pausethirtynine() {
+  var thirtynine = document.getElementById("thirtynine");
+  if (thirtynine.paused) {
+    thirtynine.play();
+  } else {
+    thirtynine.pause();
+  }
+}
+</script>
+
+
+<audio id="forty" source src="sounds/Kwazii-how-dare-that-dastardly-beast.mp3" type='audio/mp3'>Your user agent does not support the HTML5 Audio element.</audio>
+<script>
+function aud_play_pauseforty() {
+  var forty = document.getElementById("forty");
+  if (forty.paused) {
+    forty.play();
+  } else {
+    forty.pause();
+  }
+}
+</script>
+
+
+<audio id="fortyone" source src="sounds/Tweak-ah-there-that-should-do-it.mp3" type='audio/mp3'>Your user agent does not support the HTML5 Audio element.</audio>
+<script>
+function aud_play_pausefortyone() {
+  var fortyone = document.getElementById("fortyone");
+  if (fortyone.paused) {
+    fortyone.play();
+  } else {
+    fortyone.pause();
+  }
+}
+</script>
+
+
+<audio id="fortytwo" source src="sounds/Tweak-some-testdrive.mp3" type='audio/mp3'>Your user agent does not support the HTML5 Audio element.</audio>
+<script>
+function aud_play_pausefortytwo() {
+  var fortytwo = document.getElementById("fortytwo");
+  if (fortytwo.paused) {
+    fortytwo.play();
+  } else {
+    fortytwo.pause();
+  }
+}
+</script>
+
+
+<audio id="fortythree" source src="sounds/Kwazii-who-could-be-knocking.mp3" type='audio/mp3'>Your user agent does not support the HTML5 Audio element.</audio>
+<script>
+function aud_play_pausefortythree() {
+  var fortythree = document.getElementById("fortythree");
+  if (fortythree.paused) {
+    fortythree.play();
+  } else {
+    fortythree.pause();
+  }
+}
+</script>
+
+
+<audio id="fortyfour" source src="sounds/Tweak-the-gup.mp3" type='audio/mp3'>Your user agent does not support the HTML5 Audio element.</audio>
+<script>
+function aud_play_pausefortyfour() {
+  var fortyfour = document.getElementById("fortyfour");
+  if (fortyfour.paused) {
+    fortyfour.play();
+  } else {
+    fortyfour.pause();
+  }
+}
+</script>
+
+<audio id="fortyfive" source src="sounds/Vegimal-faint.mp3" type='audio/mp3'>Your user agent does not support the HTML5 Audio element.</audio>
+<script>
+function aud_play_pausefortyfive() {
+  var fortyfive = document.getElementById("fortyfive");
+  if (fortyfive.paused) {
+    fortyfive.play();
+  } else {
+    fortyfive.pause();
+  }
+}
+</script>
+
+
+
+</div>
+</body>
+</html>
+
+
+
